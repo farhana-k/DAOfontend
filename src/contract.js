@@ -5,7 +5,8 @@ import FilmDAO from "./FilmDAO.json"
   const web3 = new Web3(ethereum);
 
   // const ContractAddress = FilmDAO.networks["5777"].address;
-  const ContractAddress = '0x32E196677dc2F48118c6820dB26076af905D5a4c';
+  // 0x32E196677dc2F48118c6820dB26076af905D5a4c
+  const ContractAddress = '0x8d6192DDC0aE82323f231eEf932dC9c4952Ad4cA';
   const ContractAbi = FilmDAO.abi;
 
   const myContract = new web3.eth.Contract(
