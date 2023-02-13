@@ -21,10 +21,10 @@ function App() {
 
   const ethereum = window.ethereum;
 
-  const [state, getstate] = useState({data:""})
+  const [state, getstate] = useState({data:''})
 
     const getInitialState = () => {
-      const value = "Review";
+      const value = "0";
       return value;
     };
 
@@ -49,6 +49,7 @@ function App() {
   };
   
   
+
   // var Web3 = require('web3')
   // const web3 = new Web3('http://localhost:8545');
 
@@ -119,8 +120,10 @@ function App() {
 
   const setState = async () => {
     enableMetaMask();
-    let id = document.getElementById('proposId').value;
+    let id = document.getElementById('proposeId').value;
     const state = value;
+    // console.log("ID",id);
+    // console.log("state",state);
     const addProject = await myContract.methods.Proposal_SetState(
       id, state
     )
@@ -138,9 +141,11 @@ function App() {
   let data = [];
   const p = Promise.resolve(get_State());
   p.then(value => {
-      for (let i = 0; i < value[0].length ; i++){
-          data.push((value[0][i].returnValues))
-      }
+    // console.log(value);
+      // for (let i = 0; i < value[0].length ; i++){
+          data.push((value[0]))
+          // console.log(data)
+      // }
   })
 
 
@@ -189,7 +194,7 @@ function App() {
               </Col>
 
               <Col>
-                <Card style={{ width: "30rem" }}>
+                <Card style={{ width: "30rem" }}> 
                   <Card.Header
                   ><Card.Title>
                   <b>Get Proposal State</b>
@@ -227,7 +232,7 @@ function App() {
                     <Card.Text>
                     {/* Project Name */}
                     <br></br>
-                      <input id="propoId" placeholder="Proposal ID"></input>
+                      <input id="proposeId" placeholder="Proposal ID"></input>
                       <br></br>
                       <br></br>
                       <select value={value} onChange={handleChange} >
@@ -254,7 +259,7 @@ function App() {
                 <Card style={{ width: "30rem" }}>
                   <Card.Header
                   ><Card.Title>
-                  <b>Close Voting for proposal</b>
+                  <b>Queue and execute proposal</b>
                 </Card.Title></Card.Header>
                   <Card.Body>
                     <Card.Text>
@@ -277,6 +282,7 @@ function App() {
               </Col>
 
               </Row>
+              
               </Tab>
 
 
