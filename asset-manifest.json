@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/farhana-k/DAOfrontend/static/css/main.2ce41bdf.css",
+    "main.js": "/farhana-k/DAOfrontend/static/js/main.ee599de7.js",
+    "static/js/787.b701888c.chunk.js": "/farhana-k/DAOfrontend/static/js/787.b701888c.chunk.js",
+    "index.html": "/farhana-k/DAOfrontend/index.html",
+    "main.2ce41bdf.css.map": "/farhana-k/DAOfrontend/static/css/main.2ce41bdf.css.map",
+    "main.ee599de7.js.map": "/farhana-k/DAOfrontend/static/js/main.ee599de7.js.map",
+    "787.b701888c.chunk.js.map": "/farhana-k/DAOfrontend/static/js/787.b701888c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ce41bdf.css",
+    "static/js/main.ee599de7.js"
+  ]
+}
